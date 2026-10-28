@@ -1,10 +1,10 @@
 {
   "formatVersion": "1.0",
-  "exportedAt": "2026-09-21T10:07:25.676Z",
+  "exportedAt": "2026-10-28T16:25:00.000Z",
   "bundle": {
     "packageId": "google-antigravity",
     "packageName": "Google Antigravity 2.0 研发套件",
-    "packageVersion": "v1.0",
+    "packageVersion": "v1.1",
     "category": "dev",
     "mode": "strict",
     "icon": "🌌",
@@ -24,6 +24,19 @@
         "followSlotId": "main"
       }
     ],
+    "policy": {
+      "proxyTcp": true,
+      "blockIpv6": true,
+      "blockUdp": true,
+      "proxyUdp": false,
+      "proxySubprocesses": true,
+      "bypassLan": true,
+      "dnsMode": "safe_pure",
+      "portFilterMode": "all",
+      "customPorts": "",
+      "targetFilterMode": "all",
+      "targetRules": []
+    },
     "processes": [
       {
         "exe": "Antigravity.exe",
@@ -58,7 +71,9 @@
       "antigravity.google",
       "gemini.google.com",
       "generativeai.google",
-      "aistudio.google.com"
+      "aistudio.google.com",
+      "generativelanguage.googleapis.com",
+      "cloudaicompanion.googleapis.com"
     ],
     "author": "ProcWeaver"
   }

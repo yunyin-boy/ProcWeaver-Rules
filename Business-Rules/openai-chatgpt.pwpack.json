@@ -1,14 +1,14 @@
 {
   "formatVersion": "1.0",
-  "exportedAt": "2026-09-21T10:07:25.676Z",
+  "exportedAt": "2026-10-28T16:25:00.000Z",
   "bundle": {
     "packageId": "openai-chatgpt",
     "packageName": "OpenAI / ChatGPT 生产力套件",
-    "packageVersion": "v1.3",
+    "packageVersion": "v1.4",
     "category": "dev",
     "mode": "strict",
     "icon": "🧠",
-    "description": "OpenAI 应用与后台进程的分流模板；导入后选择本机出口并核对进程范围。",
+    "description": "OpenAI 客户端与本地开发 IDE / 扩展插件的分流模板；导入后选择本机出口并核对进程范围。",
     "slots": [
       {
         "id": "main",
@@ -24,6 +24,19 @@
         "followSlotId": "main"
       }
     ],
+    "policy": {
+      "proxyTcp": true,
+      "blockIpv6": true,
+      "blockUdp": true,
+      "proxyUdp": false,
+      "proxySubprocesses": true,
+      "bypassLan": true,
+      "dnsMode": "safe_pure",
+      "portFilterMode": "all",
+      "customPorts": "",
+      "targetFilterMode": "all",
+      "targetRules": []
+    },
     "processes": [
       {
         "exe": "ChatGPT.exe",
@@ -49,6 +62,7 @@
     "domains": [
       "openai.com",
       "chatgpt.com",
+      "chat.com",
       "oaistatic.com",
       "oaiusercontent.com",
       "auth0.openai.com"
