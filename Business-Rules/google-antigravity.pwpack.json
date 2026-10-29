@@ -1,10 +1,10 @@
 {
   "formatVersion": "1.0",
-  "exportedAt": "2026-10-28T16:25:00.000Z",
+  "exportedAt": "2026-10-29T05:15:00.000Z",
   "bundle": {
     "packageId": "google-antigravity",
     "packageName": "Google Antigravity 2.0 研发套件",
-    "packageVersion": "v1.1",
+    "packageVersion": "v1.2",
     "category": "dev",
     "mode": "strict",
     "icon": "🌌",
@@ -35,7 +35,8 @@
       "portFilterMode": "all",
       "customPorts": "",
       "targetFilterMode": "all",
-      "targetRules": []
+      "targetRules": [],
+      "disallowProxyArgs": true
     },
     "processes": [
       {
@@ -49,6 +50,11 @@
         "description": "LSP 语言模型与语义推理核心工作服务"
       },
       {
+        "exe": "language_server_windows_x64.exe",
+        "role": "worker",
+        "description": "LSP 语言模型服务 (Windows x64 变体)"
+      },
+      {
         "exe": "agy.exe",
         "role": "cli",
         "description": "Antigravity 开发者命令行终端"
@@ -57,15 +63,23 @@
         "exe": "antigravity-service.exe",
         "role": "worker",
         "description": "后台状态监测守护服务"
+      },
+      {
+        "exe": "Gemini.exe",
+        "role": "worker",
+        "description": "Google Gemini 桌面客户端"
       }
     ],
     "additionalExes": [
       "Antigravity.exe",
       "antigravity.exe",
       "language_server.exe",
+      "language_server_windows_x64.exe",
       "agy.exe",
       "antigravity-service.exe",
-      "Antigravity IDE.exe"
+      "Antigravity IDE.exe",
+      "Gemini.exe",
+      "google gemini.exe"
     ],
     "domains": [
       "antigravity.google",
@@ -73,7 +87,8 @@
       "generativeai.google",
       "aistudio.google.com",
       "generativelanguage.googleapis.com",
-      "cloudaicompanion.googleapis.com"
+      "cloudaicompanion.googleapis.com",
+      "googleapis.com"
     ],
     "author": "ProcWeaver"
   }

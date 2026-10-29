@@ -1,10 +1,10 @@
 {
   "formatVersion": "1.0",
-  "exportedAt": "2026-10-28T16:25:00.000Z",
+  "exportedAt": "2026-10-29T05:15:00.000Z",
   "bundle": {
     "packageId": "openai-chatgpt",
     "packageName": "OpenAI / ChatGPT 生产力套件",
-    "packageVersion": "v1.4",
+    "packageVersion": "v1.5",
     "category": "dev",
     "mode": "strict",
     "icon": "🧠",
@@ -35,7 +35,8 @@
       "portFilterMode": "all",
       "customPorts": "",
       "targetFilterMode": "all",
-      "targetRules": []
+      "targetRules": [],
+      "disallowProxyArgs": false
     },
     "processes": [
       {
@@ -63,6 +64,7 @@
       "openai.com",
       "chatgpt.com",
       "chat.com",
+      "sora.com",
       "oaistatic.com",
       "oaiusercontent.com",
       "auth0.openai.com"

@@ -18,10 +18,23 @@ ProcWeaver 创新性地采用“以业务为中心”的精细化分流模式。
 
 | 规则包名称 | 版本 | 适用业务场景 | 纳管核心进程 | 纳管核心域名 | 规则包下载 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **OpenAI / ChatGPT 生产力套件** | `v1.4` | ChatGPT 桌面客户端、IDE 扩展插件（Codex/Copilot）及本地开发环境 | `ChatGPT.exe`<br>`codex.exe`<br>`node.exe` | `openai.com`<br>`chatgpt.com`<br>`chat.com`<br>`oaistatic.com`<br>`oaiusercontent.com`<br>`auth0.openai.com` | [下载规则包 (JSON)](https://raw.githubusercontent.com/yunyin-boy/ProcWeaver-Rules/main/Business-Rules/openai-chatgpt.pwpack.json) |
-| **Google Antigravity 2.0 研发套件** | `v1.1` | Antigravity IDE、语言推理模型工作进程 (LSP) 及 CLI 工具链 | `Antigravity.exe`<br>`language_server.exe`<br>`agy.exe`<br>`antigravity-service.exe` | `antigravity.google`<br>`gemini.google.com`<br>`generativeai.google`<br>`aistudio.google.com`<br>`generativelanguage.googleapis.com`<br>`cloudaicompanion.googleapis.com` | [下载规则包 (JSON)](https://raw.githubusercontent.com/yunyin-boy/ProcWeaver-Rules/main/Business-Rules/google-antigravity.pwpack.json) |
+| **OpenAI / ChatGPT 生产力套件** | `v1.5` | ChatGPT 桌面客户端、IDE 扩展插件（Codex/Copilot）及本地开发环境 | `ChatGPT.exe`<br>`codex.exe`<br>`node.exe` | `openai.com`<br>`chatgpt.com`<br>`chat.com`<br>`sora.com`<br>`oaistatic.com`<br>`oaiusercontent.com`<br>`auth0.openai.com` | [下载规则包 (JSON)](https://raw.githubusercontent.com/yunyin-boy/ProcWeaver-Rules/main/Business-Rules/openai-chatgpt.pwpack.json) |
+| **Google Antigravity 2.0 研发套件** | `v1.2` | Antigravity IDE、Gemini 客户端、语言推理模型工作进程 (LSP) 及 CLI 工具链 | `Antigravity.exe`<br>`language_server.exe`<br>`language_server_windows_x64.exe`<br>`Gemini.exe`<br>`agy.exe`<br>`antigravity-service.exe` | `antigravity.google`<br>`gemini.google.com`<br>`generativeai.google`<br>`aistudio.google.com`<br>`generativelanguage.googleapis.com`<br>`cloudaicompanion.googleapis.com`<br>`googleapis.com` | [下载规则包 (JSON)](https://raw.githubusercontent.com/yunyin-boy/ProcWeaver-Rules/main/Business-Rules/google-antigravity.pwpack.json) |
 
 > 📁 规则包源文件存放于 [`Business-Rules/`](Business-Rules/) 目录。下载时如遇浏览器直接展示 JSON 文本，可直接右键“另存为”保存为 `.pwpack.json` 文件。
+
+---
+
+## 版本更新日志（Changelog）
+
+### 2026-10-29
+- **Google Antigravity 2.0 研发套件 (`v1.2`)**：
+  - **安全自检透明接管**：策略配置默认开启 `disallowProxyArgs: true`，禁止注入 `--proxy-server` 命令行参数，完美兼容 Gemini 桌面端自检机制，自动配合 TUN / WinDivert / 用户态轻量 Hook 实现纯透明分流；
+  - **纳管进程扩展**：新增 `Gemini.exe`、`language_server_windows_x64.exe` 及 `google gemini.exe` 变体；
+  - **核心域名补全**：新增 `googleapis.com`，彻底打通 Gemini 账户鉴权与 API 路由。
+- **OpenAI / ChatGPT 生产力套件 (`v1.5`)**：
+  - **官方域名补充**：纳管域名新增 `sora.com`（OpenAI Sora 视频生成主站）；
+  - **协议策略对齐**：显式对齐数据契约并设置 `disallowProxyArgs: false`，消除隐式 undefined。
 
 ---
 
